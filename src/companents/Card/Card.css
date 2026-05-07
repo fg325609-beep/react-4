@@ -1,0 +1,96 @@
+/* Card.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.one {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.one .img {
+    width: 280px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.one .img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.one .img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #eee;
+}
+
+.one .img h1 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+}
+
+.one .img p {
+    font-size: 0.9rem;
+    color: #777;
+    font-family: monospace;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Planshetlar uchun (masalan: 768px) */
+@media (max-width: 768px) {
+    .one .img {
+        width: calc(50% - 25px); /* 2 tadan chiqadi */
+    }
+}
+
+/* Telefonlar uchun (masalan: 480px) */
+@media (max-width: 480px) {
+    .one .img {
+        width: 100%; /* 1 tadan to'liq chiqadi */
+    }
+    .one .img img {
+        height: 180px;
+    }
+}
+
+/* Juda kichik ekranlar va Smart-soatlar uchun (100px gacha) */
+@media (max-width: 200px) {
+    .one {
+        padding: 5px;
+        gap: 10px;
+    }
+    .one .img {
+        width: 100%;
+        padding: 5px;
+    }
+    .one .img h1 {
+        font-size: 0.8rem;
+    }
+    .one .img p {
+        font-size: 0.6rem;
+    }
+    .one .img img {
+        height: 80px;
+    }
+}

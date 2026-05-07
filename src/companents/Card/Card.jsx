@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import  "./Cards.scss"
+import "./Card.css"; // Ikkita nuqta shart emas, chunki ular yonma-yon
 function Card() {
   const [data, setData] = useState([]);
   useEffect(() => {
