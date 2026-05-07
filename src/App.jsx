@@ -1,12 +1,12 @@
-import React from 'react'
-import "./companents/Card/Card"
+import React from 'react';
+import Card from "./companents/Card/Card"; // Komponentni nom bilan import qiling
 
 const App = () => {
   return (
     <>
-    <Card/>
+      <Card />
     </>
-  )
-}
+  );
+};
 
 export default App;

@@ -8,14 +8,23 @@ function Card  (){
         .then(data => data.json()
         .then(data =>{
           setData(data)
-          console.log(data);  
+          console.log(data);
+          
         })
       )
-    }, )
+    },[] )
     
   return (
     <div className='one'>
+      {data.map(el => (
 
+      <div className="img" key={el.id}>
+        <img src={el.avatar} alt="" />
+        <h1>{el.name}</h1>
+        <p>{el.createdAt}</p>
+      
+      </div>
+      ))}
     </div>
   )
 }
