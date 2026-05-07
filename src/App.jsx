@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from "./companents/Card/Card"; // Komponentni nom bilan import qiling
+import Card from "./companents/Card/Card"; 
 
 const App = () => {
   return (
