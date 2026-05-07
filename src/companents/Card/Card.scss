@@ -1,14 +1,81 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: 'Arial', sans-serif;
 }
-.one{
+
+.one {
     width: 100%;
     max-width: 1200px;
-    img{
-        
+    margin: 50px auto; // Markazga keltirish
+    display: flex;
+    flex-wrap: wrap; // Kartochkalar sig'masa pastga tushadi
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    .img {
+        width: 280px;
+        background: #f4f4f4;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        img {
+            width: 100%; // Kartochka kengligida bo'ladi
+            height: 200px;
+            object-fit: cover; // Rasmni cho'zmasdan sig'diradi
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background-color: #ddd; // Rasm yuklanguncha kulrang fon
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+    }
+}
+
+// MEDIA QUERIES (Ekran o'lchamiga qarab moslashish)
+
+@media (max-width: 1024px) {
+    .one .img {
+        width: calc(45% - 20px); // Planshetlarda 2 tadan chiqadi
+    }
+}
+
+@media (max-width: 600px) {
+    .one .img {
+        width: 100%; // Telefonlarda 1 tadan to'liq chiqadi
+    }
+}
+
+@media (max-width: 100px) {
+    // Siz so'ragan juda kichik ekran uchun (asosan aqlli soatlar)
+    .one {
+        padding: 5px;
+        .img {
+            width: 90px;
+            padding: 5px;
+            h1 { font-size: 0.7rem; }
+            p { display: none; } // Kichik ekranda matnni yashirish
+        }
     }
 }
