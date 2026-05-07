@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./Card.css"; // Ikkita nuqta shart emas, chunki ular yonma-yon
+import "./Card.css"; 
 function Card() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -9,7 +9,6 @@ function Card() {
         setData(resData);
         console.log(resData);
       })
-      // .catch((err) => console.error("Xatolik yuz berdi:", err)); 
   }, []);
   return (
     <div className='one'>
